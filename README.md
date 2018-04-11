@@ -55,20 +55,6 @@ end if
 if answer is equal to "Cancel" then
 end if
 ```
-```set question to display dialog "Which hibernate do you want to set?" buttons {"Default", "25", "Cancel"} default button 2
-set answer to button returned of question
-
-if answer is equal to "Default" then
-	do shell script "/Applications/HibernateSwitcher/Hibernate3.command" with administrator privileges
-end if
-
-if answer is equal to "25" then
-	do shell script "/Applications/HibernateSwitcher/Hibernate25.command" with administrator privileges
-end if
-
-if answer is equal to "Cancel" then
-end if
-```
 </br>
 # License</br>
 This is free and unencumbered software released into the public domain.</br>
