@@ -8,7 +8,7 @@ in hibernate 25 your RAM is coppied to your hard drive or SSD. This takes longer
 soon shuts off power to your RAM until it's time to wake up. Upon wake up all of your files are restored to RAM. The only draw back</br>
 is that your computer ports are also powered off in this mode.</br>
 </br>
-#license</br>
+# License</br>
 This is free and unencumbered software released into the public domain.</br>
 </br>
 Anyone is free to copy, modify, publish, use, compile, sell, or</br>
