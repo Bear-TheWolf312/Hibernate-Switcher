@@ -8,6 +8,69 @@ in hibernate 25 your RAM is coppied to your hard drive or SSD. This takes longer
 soon shuts off power to your RAM until it's time to wake up. Upon wake up all of your files are restored to RAM. The only draw back</br>
 is that your computer ports are also powered off in this mode.</br>
 </br>
+# Note:</br>
+Since this app is made from Apple & Shell scripts using Automator there's no real source code to compile yourself.</br>
+If you really want to poke at the internals and possibly make a better version the scripts are stored in document.wflow</br>
+along with all the other things the automator app needed to create it.</br>
+</br>
+# Code:</br>
+```
+#Bash script included with program:
+cd /Applications
+mkdir HibernateSwitcher
+cat &gt; /Applications/HibernateSwitcher/Hibernate25.command &lt;&lt; EOT
+#!/bin/bash
+sudo pmset -a hibernatemode 25
+
+EOT
+
+cat &gt; /Applications/HibernateSwitcher/Hibernate3.command &lt;&lt; EOT
+#!/bin/bash
+sudo pmset -a hibernatemode 3
+
+EOT
+
+cd /Applications/HibernateSwitcher
+chmod a+x Hibernate25.command &amp;&amp; chmod a+x Hibernate3.command
+cd /
+# Generate Readme
+cat &gt; /Applications/HibernateSwitcher/Readme.txt &lt;&lt; EOT
+These scripts are needed to run Hibernate Switcher. They will automatically regenerate every time you run the app.
+
+EOT
+
+Applescript:
+
+set question to display dialog "Which hibernate do you want to set?" buttons {"Default", "25", "Cancel"} default button 2
+set answer to button returned of question
+
+if answer is equal to "Default" then
+	do shell script "/Applications/HibernateSwitcher/Hibernate3.command" with administrator privileges
+end if
+
+if answer is equal to "25" then
+	do shell script "/Applications/HibernateSwitcher/Hibernate25.command" with administrator privileges
+end if
+
+if answer is equal to "Cancel" then
+end if
+```
+</br
+```set question to display dialog "Which hibernate do you want to set?" buttons {"Default", "25", "Cancel"} default button 2
+set answer to button returned of question
+
+if answer is equal to "Default" then
+	do shell script "/Applications/HibernateSwitcher/Hibernate3.command" with administrator privileges
+end if
+
+if answer is equal to "25" then
+	do shell script "/Applications/HibernateSwitcher/Hibernate25.command" with administrator privileges
+end if
+
+if answer is equal to "Cancel" then
+end if
+```
+</br
 # License</br>
 This is free and unencumbered software released into the public domain.</br>
 </br>
