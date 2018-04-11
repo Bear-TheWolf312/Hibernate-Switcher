@@ -242,7 +242,7 @@ EOT</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>set question to display dialog "Which hibernate do you want to set?" buttons {"Default", "25"} default button 2set answer to button returned of questionif answer is equal to "Default" then	do shell script "/Applications/HibernateSwitcher/Hibernate3.command" with administrator privilegesend ifif answer is equal to "25" then	do shell script "/Applications/HibernateSwitcher/Hibernate25.command" with administrator privilegesend if</string>
+					<string>set question to display dialog "Which hibernate do you want to set?" buttons {"Default", "25", "Cancel"} default button 2set answer to button returned of questionif answer is equal to "Default" then	do shell script "/Applications/HibernateSwitcher/Hibernate3.command" with administrator privilegesend ifif answer is equal to "25" then	do shell script "/Applications/HibernateSwitcher/Hibernate25.command" with administrator privilegesend ifif answer is equal to "Cancel" thenend if</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -306,7 +306,7 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>B1372724-1560-44FA-946B-92F063BE3D7E</key>
+		<key>62DF28DF-833A-46FE-AB1C-13629CC28087</key>
 		<dict>
 			<key>from</key>
 			<string>1A678F89-C4EF-461C-BFCF-F5E3E09FE839 - 1A678F89-C4EF-461C-BFCF-F5E3E09FE839</string>
