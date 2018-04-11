@@ -55,7 +55,6 @@ end if
 if answer is equal to "Cancel" then
 end if
 ```
-</br
 ```set question to display dialog "Which hibernate do you want to set?" buttons {"Default", "25", "Cancel"} default button 2
 set answer to button returned of question
 
@@ -70,7 +69,7 @@ end if
 if answer is equal to "Cancel" then
 end if
 ```
-</br
+</br>
 # License</br>
 This is free and unencumbered software released into the public domain.</br>
 </br>
