@@ -1,3 +1,5 @@
+***No longer maintaining this, it works on MacOS 10.15 & MacOS 11 as it is, and is unlikely to need future updates. I'm currently evaluating creating a preference pane instead of this. Need to learn a bit more about the internals of MacOS though before I can commit to that.***
+
 # Hibernate-Switcher
 A simple automator app made to switch the hibernate mode from default to 25 or back to default.</br>
 This app simply serves one purpose, to make it easier for the end user to change the hibernate settings on their Mac.</br>
